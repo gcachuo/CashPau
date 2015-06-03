@@ -1,0 +1,18 @@
+﻿body {
+   
+}
+.align-left {
+     text-align: left;
+}
+.cabecera {
+    background-color: #00008b;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+input {
+    text-align: center;
+}
+div {
+    margin-top: 20px;
+}

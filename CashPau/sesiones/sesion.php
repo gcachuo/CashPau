@@ -1,3 +1,6 @@
+<link href="css/bootstrap-theme.css" rel="css/stylesheet" />
+<link href="css/bootstrap.css" rel="css/stylesheet" />
+<link href="css/site.css" rel="css/stylesheet" />
 <?php
 if(!isset($_SESSION['usuario']) && !isset($_SESSION['password']))
 		{
@@ -8,7 +11,7 @@ if(!isset($_SESSION['usuario']) && !isset($_SESSION['password']))
 		}
 		else
 		{
-		require(CaducarSesion.php);
+		require("CaducarSesion.php");
 			$nombre = $_SESSION['usuario'];
 			$pass = $_SESSION['password'];
 			echo "Nombre: $nombre Password: $pass";

@@ -57,6 +57,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CaducarSesion.php" />
+    <Content Include="cerrarConexion.php" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\site.css" />
+    <Content Include="home.php" />
+    <Content Include="homeAdmin.php" />
+    <Content Include="homeUser.php" />
+    <Content Include="login.php" />
+    <Content Include="managerBD.php" />
+    <Content Include="salir.php" />
+    <Content Include="sesion.php" />
     <Content Include="sesiones\CaducarSesion.php" />
     <Content Include="sesiones\cerrarConexion.php" />
     <Content Include="sesiones\guardar.php" />
