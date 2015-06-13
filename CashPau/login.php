@@ -16,7 +16,7 @@ if (isset($_POST['usuario'])&&isset($_POST['password']))
     $consulta="select * from usuarios where usuario='$usuario' and password='$password'";
     $ejecutarConsulta =  mysql_query($consulta);
     include("cerrarConexion.php"); 
-    
+     
 }
 else
     $mensaje="No ha capturado un valor en el formulario";
