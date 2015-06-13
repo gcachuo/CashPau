@@ -11,12 +11,19 @@
     <div class="col-md-3">
     </div>
     <div class="col-md-2">
+        <div>
         <img src="" alt="imagen" width="150" height="150" />
+            </div>
+        <div>
         <input type="button" class="col-md-9 btn-primary" value="Mi Perfil" />
+    </div>
     </div>
     <div class="col-md-5">
         <div class="col-md-6">
-            <input type="button" class="col-md-12 btn-primary" value="Registrar Usuario" />
+            <form action="home.php" method="post">
+                <input value="reguser" name="reguser" type="hidden"/>
+            <input type="submit" class="col-md-12 btn-primary" value="Registrar Usuario" />
+                </form>
         </div>
         <div class="col-md-6">
             <input type="button" class="col-md-12 btn-primary" value="Administrar Usuarios" />

@@ -67,6 +67,8 @@
     <Content Include="homeUser.php" />
     <Content Include="login.php" />
     <Content Include="managerBD.php" />
+    <Content Include="misServicios.php" />
+    <Content Include="registrarUser.php" />
     <Content Include="salir.php" />
     <Content Include="sesion.php" />
     <Content Include="sesiones\CaducarSesion.php" />

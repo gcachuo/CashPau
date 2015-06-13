@@ -4,10 +4,13 @@
 .align-left {
      text-align: left;
 }
+.align-right {
+     text-align: right;
+}
 .cabecera {
     background-color: #00008b;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 0 0;
+    padding: 0 0 30px;
     color: #ffffff;
 }
 input {

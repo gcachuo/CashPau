@@ -16,12 +16,36 @@ require("salir.php");
             if($_SESSION['tipoUsuario']=="a")
             {
                 //Administrador
-                require('homeAdmin.php');
+                
+                if(isset($_POST['reguser']))
+                {
+                    require('registrarUser.php');
+                }
+                else if(isset($_POST['back']))
+                {
+                    require('homeAdmin.php');
+                }   
+                else
+                {
+                    require('homeAdmin.php');
+                }
             }
             else if($_SESSION['tipoUsuario']=="u")
-            {
+            {                
                 //Usuario
-                require('homeUser.php');
+                if(isset($_POST['miserv']))
+                {
+                    require('misServicios.php');
+                }
+                else if(isset($_POST['back']))
+                {
+                    require('homeUser.php');
+                }
+                else
+                {
+                    require('homeUser.php');
+                }
+                
             }
         }
         else
