@@ -2,7 +2,7 @@
 	$hostName="localhost";
 	$dataBaseName="bdweb";
 	$userName="root";
-	$passwordDB="sqlserver";
+	$passwordDB="mysql";
 	$conexion= mysql_connect($hostName, $userName, $passwordDB);
 	mysql_select_db($dataBaseName,$conexion);
 	if($conexion){

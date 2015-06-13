@@ -16,3 +16,9 @@ C:\Users\Memo\Documents\MEGAsync\CashPau\CashPau\bin\WebApplication1.pdb
 C:\Users\Memo\Documents\MEGAsync\CashPau\CashPau\obj\Debug\CashPau.csprojResolveAssemblyReference.cache
 C:\Users\Memo\Documents\MEGAsync\CashPau\CashPau\obj\Debug\WebApplication1.dll
 C:\Users\Memo\Documents\MEGAsync\CashPau\CashPau\obj\Debug\WebApplication1.pdb
+C:\Users\Ann\Source\Repos\CashPau\CashPau\bin\WebApplication1.dll.config
+C:\Users\Ann\Source\Repos\CashPau\CashPau\bin\WebApplication1.dll
+C:\Users\Ann\Source\Repos\CashPau\CashPau\bin\WebApplication1.pdb
+C:\Users\Ann\Source\Repos\CashPau\CashPau\obj\Debug\CashPau.csprojResolveAssemblyReference.cache
+C:\Users\Ann\Source\Repos\CashPau\CashPau\obj\Debug\WebApplication1.dll
+C:\Users\Ann\Source\Repos\CashPau\CashPau\obj\Debug\WebApplication1.pdb
