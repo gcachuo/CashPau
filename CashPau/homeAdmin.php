@@ -12,18 +12,18 @@
     </div>
     <div class="col-md-2">
         <div>
-        <img src="" alt="imagen" width="150" height="150" />
-            </div>
+            <img src="" alt="imagen" width="150" height="150" />
+        </div>
         <div>
-        <input type="button" class="col-md-9 btn-primary" value="Mi Perfil" />
-    </div>
+            <input type="button" class="col-md-9 btn-primary" value="Mi Perfil" />
+        </div>
     </div>
     <div class="col-md-5">
         <div class="col-md-6">
             <form action="home.php" method="post">
-                <input value="reguser" name="reguser" type="hidden"/>
-            <input type="submit" class="col-md-12 btn-primary" value="Registrar Usuario" />
-                </form>
+                <input value="reguser" name="reguser" type="hidden" />
+                <input type="submit" class="col-md-12 btn-primary" value="Registrar Usuario" />
+            </form>
         </div>
         <div class="col-md-6">
             <input type="button" class="col-md-12 btn-primary" value="Administrar Usuarios" />
@@ -35,12 +35,9 @@
             <input type="button" class="col-md-12 btn-primary" value="Administrar Servicios" />
         </div>
     </div>
-    <div class="col-md-12">
-        <div class="col-md-9"></div>
-        <input type="button" class="col-sm-1 btn-primary" value="Facebook" />
-        <input type="button" class="col-sm-1 btn-primary" value="Twitter" />
-        <input type="button" class="col-sm-1 btn-primary" value="LinkedIn" />
-    </div>
+    <?php
+    require("redes.php");
+    ?>
 
 
 </body>

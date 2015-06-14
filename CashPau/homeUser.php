@@ -6,7 +6,10 @@
 <body>
     <div class="col-md-10"></div>
     <div class="col-md-1">
-        <input value="contacto" type="button" /></div>
+        <form action="home.php" method="post">
+        <input name="contacto" value="contacto" type="submit" />
+            </form>
+    </div>
 
     <div class="col-md-12">
         <div class="col-md-3">
@@ -17,12 +20,13 @@
         <div class="col-md-3">
             <div class="col-md-12">
                 <form action="home.php" method="post">
-                    <input value="miserv" name="miserv" type="hidden" />
-                    <input type="submit" class="col-md-12 btn-primary" value="Mis Servicios" />
+                    <input type="submit" name="miserv" class="col-md-12 btn-primary" value="Mis Servicios" />
                 </form>
             </div>
             <div class="col-md-12">
-                <input type="submit" class="col-md-12 btn-primary" value="Pagar Servicio" />
+                <form action="home.php" method="post">                    
+                    <input name="pagarserv" type="submit" class="col-md-12 btn-primary" value="Pagar Servicio" />
+                </form>
             </div>
         </div>
     </div>
@@ -44,12 +48,9 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12">
-        <div class="col-md-9"></div>
-        <input type="button" class="col-sm-1 btn-primary" value="Facebook" />
-        <input type="button" class="col-sm-1 btn-primary" value="Twitter" />
-        <input type="button" class="col-sm-1 btn-primary" value="LinkedIn" />
-    </div>
+   <?php
+   require("redes.php");
+   ?>
 
 </body>
 </html>

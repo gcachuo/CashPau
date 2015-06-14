@@ -4,16 +4,9 @@
     <title></title>
 </head>
 <body>
-    <div class="col-md-10">
-    </div>
-    <div class="col-md-1">
-        <form action="home.php" method="post">
-            <input value="back" name="back" type="hidden" />
-            <input type="submit" class="col-md-12 btn-primary" value="Regresar" />
-        </form>
-
-
-    </div>
+       <?php
+   require("regresar.php");
+   ?>
     <div class="col-md-12">
         <div class="col-md-2">
         </div>

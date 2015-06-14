@@ -37,6 +37,14 @@ require("salir.php");
                 {
                     require('misServicios.php');
                 }
+                else if(isset($_POST['pagarserv']))
+                {
+                    require('pagarServicio.php');
+                }
+                else if(isset($_POST['contacto']))
+                {
+                    require('contacto.php');
+                }
                 else if(isset($_POST['back']))
                 {
                     require('homeUser.php');

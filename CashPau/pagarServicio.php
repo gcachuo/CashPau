@@ -5,14 +5,14 @@
     <link href="css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <?php
+     <?php
    require ("regresar.php");
    ?>
     <div class="col-md-12">
         <div class="col-md-12">
 
-            <h3 class="col-md-6">NUEVO SERVICIO</h3>
-            <h3 class="align-right col-md-5">SERVICIOS ACTUALES</h3>
+            <h3 class="col-md-6">Selecciona tu Servicio</h3>
+            <h3 class="align-right col-md-5">Ultimos Pagos Realizados</h3>
         </div>
 
         <form>
@@ -32,12 +32,17 @@
                 <div class="col-md-6">
                     <div class="col-md-6">
                         <p>
-                            <label class="col-md-4">ID Folio:</label><input class="col-md-8" placeholder="0000000000000" />
+                            <label class="col-md-4">Forma de Pago:</label>
+                            <select>
+                                <option value="cfe">Efectivo</option>
+                                <option value="sapal">Tarjeta</option>
+                                <option value="predial">Otro</option>
+                            </select>
                         </p>
                         <br />
                         <p>
-                            <label class="col-md-4">Nombre:</label>
-                            <input class="col-md-8" placeholder="Descripcion" />
+                            <label class="col-md-4">Cantidad:</label>
+                            <input class="col-md-8" placeholder="Cantidad" />
                         </p>
                     </div>
                 </div>
@@ -65,10 +70,10 @@
             </div>
             <div class="col-md-3">
                 <div class="col-md-6">
-                    <input type="button" class="col-md-12 btn-primary" value="Guardar" />
+                    <input type="button" class="col-md-12 btn-primary" value="Aceptar" />
                 </div>
                 <div class="col-md-6">
-                    <input type="button" class="col-md-12 btn-primary" value="Cancelar" />
+                    <input type="button" class="col-md-12 btn-primary" value="Limpiar" />
                 </div>
             </div>
         </form>
