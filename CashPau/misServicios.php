@@ -15,15 +15,14 @@
             <h3 class="align-right col-md-5">SERVICIOS ACTUALES</h3>
         </div>
 
-        <form>
+        <form action="home.php" method="post">
 
             <div class="col-md-12">
                 <div class="col-md-6">
-                    <select>
-                        <option value="cfe">CFE</option>
-                        <option value="sapal">Sapal</option>
-                        <option value="predial">Predial</option>
-
+                    <select name="idServicio">
+                        <option value="1">CFE</option>
+                        <option value="2">Sapal</option>
+                        <option value="3">Predial</option>
                     </select>
 
                 </div>
@@ -32,12 +31,12 @@
                 <div class="col-md-6">
                     <div class="col-md-6">
                         <p>
-                            <label class="col-md-4">ID Folio:</label><input class="col-md-8" placeholder="0000000000000" />
+                            <label class="col-md-4">ID Folio:</label><input name="numeroCliente" class="col-md-8" placeholder="0000000000000" />
                         </p>
                         <br />
                         <p>
                             <label class="col-md-4">Nombre:</label>
-                            <input class="col-md-8" placeholder="Descripcion" />
+                            <input name="nombre" class="col-md-8" placeholder="Descripcion" />
                         </p>
                     </div>
                 </div>
@@ -65,10 +64,10 @@
             </div>
             <div class="col-md-3">
                 <div class="col-md-6">
-                    <input type="button" class="col-md-12 btn-primary" value="Guardar" />
+                    <input type="submit" name="insertservicio" class="col-md-12 btn-primary" value="Guardar" />
                 </div>
                 <div class="col-md-6">
-                    <input type="button" class="col-md-12 btn-primary" value="Cancelar" />
+                    <input type="reset" class="col-md-12 btn-primary" value="Cancelar" />
                 </div>
             </div>
         </form>

@@ -8,6 +8,7 @@ require("salir.php");
 </head>
 <body>
     <?php
+    require("tiempo.php");
     try
     {
         if(isset($_SESSION['tipoUsuario']))
@@ -42,7 +43,7 @@ require("salir.php");
                         try
                         {
                             include("managerBD.php");
-                            echo $consulta="call insertusuarios ('$usuario','$nombre','$apePaterno','$apeMaterno','$password','$diaNacimiento','$mesNacimiento','$añoNacimiento','$fechaRegistro','$correo','$tipoUsuario','$origenRegistro')";
+                            echo $consulta="call insertusuarios ('$usuario','$nombre','$apePaterno','$apeMaterno','$password','$diaNacimiento','$mesNacimiento','$añoNacimiento','$fechaRegistro','$correo','$tipo','$origenRegistro')";
                             echo $ejecutarConsulta =  mysql_query($consulta);
                             if($ejecutarConsulta)
                                 echo 'correcto';
@@ -67,10 +68,10 @@ require("salir.php");
                         require('registrarUser.php');
                     }
                 }
+               
                 else if(isset($_POST['back']))
                 {
-                    require('homeAdmin.php');
-                    
+                    require('homeAdmin.php');                    
                 }  
                 else if(!isset($_POST['reguser']))
                 {
@@ -83,6 +84,30 @@ require("salir.php");
                 if(isset($_POST['miserv']))
                 {
                     require('misServicios.php');
+                }
+                else if(isset($_POST['insertservicio']))
+                {
+                    $numeroCliente=$_POST['numeroCliente'];
+                    $usuario=$_SESSION['usuario'];
+                    $idServicio=$_POST['idServicio'];
+                    $nombre=$_POST['nombre'];
+                    $fecha=date('d-m-Y', time()); 
+                    try
+                    {
+                        include("managerBD.php");
+                        echo $consulta="call insertservicioscliente ('$numeroCliente','$usuario','$idServicio','$fecha','$nombre')";
+                        echo $ejecutarConsulta =  mysql_query($consulta);
+                        if($ejecutarConsulta)
+                            echo 'correcto';
+                        else
+                            echo'incorrecto';
+                        include("cerrarConexion.php"); 
+                    }
+                    catch (Exception $exception)
+                    {
+                        echo $exception;
+                    }
+                    require("misServicios.php");
                 }
                 else if(isset($_POST['pagarserv']))
                 {
