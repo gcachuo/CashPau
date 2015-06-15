@@ -26,7 +26,7 @@
         </div>
         <div class="col-md-6">
             <form action="home.php" method="post">
-                <input type="hidden" name="adminuser" class="col-md-12 btn-primary" value="Administrar Usuarios" />
+                <input type="submit" name="adminuser" class="col-md-12 btn-primary" value="Administrar Usuarios" />
             </form>
         </div>
         <div class="col-md-6">

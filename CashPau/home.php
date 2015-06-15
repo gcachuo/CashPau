@@ -27,6 +27,30 @@ require("salir.php");
                 {
                     require('misServicios.php');
                 }
+                else if(isset($_POST['insertservicio']))
+                {
+                    $numeroCliente=$_POST['numeroCliente'];
+                    $usuario=$_SESSION['usuario'];
+                    $idServicio=$_POST['idServicio'];
+                    $nombre=$_POST['nombre'];
+                    $fecha=date('d-m-Y', time()); 
+                    try
+                    {
+                        include("managerBD.php");
+                        echo $consulta="call insertservicioscliente ('$numeroCliente','$usuario','$idServicio','$fecha','$nombre')";
+                        echo $ejecutarConsulta =  mysql_query($consulta);
+                        if($ejecutarConsulta)
+                            echo 'correcto';
+                        else
+                            echo'incorrecto';
+                        include("cerrarConexion.php"); 
+                    }
+                    catch (Exception $exception)
+                    {
+                        echo $exception;
+                    }
+                    require("misServicios.php");
+                }
                 if(isset($_POST['registrarusuario']))
                 {
                     if($_POST['password']==$_POST['repassword'])
@@ -117,7 +141,7 @@ require("salir.php");
                 {
                     require('homeAdmin.php');                    
                 }  
-                else if(!isset($_POST['reguser']))
+                else if(!isset($_POST['reguser'])&&!isset($_POST['miserv'])&&!isset($_POST['insertservicio']))
                 {
                     require('homeAdmin.php');
                 }
@@ -154,7 +178,30 @@ require("salir.php");
                     }
                     require("misServicios.php");
                 }
-                
+                else if(isset($_POST['pagar']))
+                {
+                    $usuario=$_SESSION['usuario'];
+                    $monto=$_POST['monto'];
+                    $idServicio=$_POST['idServicio'];
+                    $fecha=date('d-m-Y', time()); 
+                    try
+                    {
+                        include("managerBD.php");
+                        echo $consulta="call insertmovimientos ('$usuario','$monto','$idServicio','$fecha')";
+                        echo $ejecutarConsulta =  mysql_query($consulta);
+                        if($ejecutarConsulta)
+                            echo 'correcto';
+                        else
+                            echo'incorrecto';
+                        include("cerrarConexion.php"); 
+                    }
+                    catch (Exception $exception)
+                    {
+                        echo $exception;
+                    }
+                        
+                    require('pagarServicio.php');
+                }
                 else if(isset($_POST['pagarserv']))
                 {
                     require('pagarServicio.php');

@@ -6,8 +6,8 @@
 </head>
 <body>
     <?php
-   require ("regresar.php");
-   ?>
+    require ("regresar.php");
+    ?>
     <div class="col-md-12">
         <div class="col-md-12">
 
@@ -42,23 +42,64 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-10">
-                        <table style="width: 100%">
-                            <tr>
-                                <th>Servicio</th>
-                                <th>Nombre</th>
-                                <th>Folio</th>
-                            </tr>
-                            <tr>
-                                <td>Sapal</td>
-                                <td>Casa</td>
-                                <td>45ERT2345</td>
-                            </tr>
-                            <tr>
-                                <td>CFE</td>
-                                <td>Fabrica</td>
-                                <td>FKS4567EER</td>
-                            </tr>
-                        </table>
+                        <?php
+                        if( $_SESSION['tipoUsuario']=='a')
+                        {
+                            require("managerBD.php");
+                            $consultar="CALL selectservicioscliente";
+                            $ejecutarConsulta= mysql_query($consultar);
+                            
+                            echo "<table style='width: 100%'>";
+                            echo' <tr>';
+                            echo'<th>Folio</th>';
+                            echo'<th>Usuario</th>';
+                            echo'<th>Servicio</th>';
+                            echo'<th>Nombre</th>';
+                            echo'<th>Fecha</th>';
+                            echo'</tr>';
+                            while ($row = mysql_fetch_array($ejecutarConsulta))
+                            {
+                                echo "<tr>";
+                                echo "<td>".$row["numeroCliente"]."</td>";
+                                echo "<td>".$row["usuario"]."</td>";
+                                echo "<td>".$row["idServicio"]."</td>";
+                                echo "<td>".$row["nombre"]."</td>";
+                                echo "<td>".$row["fecha"]."</td>";
+                                echo "</tr>";
+                            }
+                            echo "</table>";
+                            include("cerrarConexion.php");	
+                        }
+                        else
+                        {
+                            $usuario=$_SESSION['usuario'];
+                            require("managerBD.php");
+                            $consultar="CALL selectserviciosclienteusuario ('$usuario')";
+                            $ejecutarConsulta= mysql_query($consultar);
+                            
+                            echo "<table style='width: 100%'>";
+                            echo' <tr>';
+                            echo'<th>Folio</th>';
+                            echo'<th>Usuario</th>';
+                            echo'<th>Servicio</th>';
+                            echo'<th>Nombre</th>';
+                            echo'<th>Fecha</th>';
+                            echo'</tr>';
+                            while ($row = mysql_fetch_array($ejecutarConsulta))
+                            {
+                                echo "<tr>";
+                                echo "<td>".$row["numeroCliente"]."</td>";
+                                echo "<td>".$row["usuario"]."</td>";
+                                echo "<td>".$row["idServicio"]."</td>";
+                                echo "<td>".$row["nombre"]."</td>";
+                                echo "<td>".$row["fecha"]."</td>";
+                                echo "</tr>";
+                            }
+                            echo "</table>";
+                            include("cerrarConexion.php");	
+                        }
+                        ?>
+
                     </div>
                 </div>
             </div>

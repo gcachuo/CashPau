@@ -17,7 +17,7 @@
         echo '<select name="usuario">';
         while ($row = mysql_fetch_array($ejecutarConsulta))
         {
-            echo "<option value='".$x."'>".$row["usuario"]."</option>";
+            echo "<option value='$x'>".$row["usuario"]."</option>";
             $x=$x+1;
         }
         echo'</select>';
@@ -37,7 +37,6 @@
             <option value="2">Sapal</option>
             <option value="3">Predial</option>
         </select><br />
-        pj
     <label>Folio</label><br />
         <?php
         echo '<input type="text" name="numeroCliente" placeholder=""/>';
