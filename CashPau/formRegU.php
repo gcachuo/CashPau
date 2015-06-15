@@ -33,10 +33,14 @@
     </div>
 </div>
 <div class="col-md-2">
-    <div class="col-md-12">
+   <!-- <div class="col-md-12">
         <input type="submit" name="registrarusuario" class="col-md-12 btn-primary" value="Registrarse" />
     </div>
     <div class="col-md-12">
-        <input type="reset" class="col-md-12 btn-primary" value="Limpiar" />
-    </div>
+        <input type="reset" class="col-md-12 btn-primary" value="Limpiar" />-->
+ <!--   </div>-->
+      <input type="submit" name="registrarusuario" class="special" value="Agregar" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													<input type="reset" value="Cancelar" />
 </div>

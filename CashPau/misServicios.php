@@ -40,7 +40,19 @@
                         </p>
                     </div>
                 </div>
+                
+            </div>
+            <div class="col-md-3">
                 <div class="col-md-6">
+                    <input type="submit" name="insertservicio" class="col-md-12 btn-primary" value="Guardar" />
+                </div>
+                <div class="col-md-6">
+                    <input type="reset" class="col-md-12 btn-primary" value="Cancelar" />
+                </div>
+            </div>
+        </form>
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
                     <div class="col-md-10">
                         <?php
                         if( $_SESSION['tipoUsuario']=='a')
@@ -102,16 +114,6 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-6">
-                    <input type="submit" name="insertservicio" class="col-md-12 btn-primary" value="Guardar" />
-                </div>
-                <div class="col-md-6">
-                    <input type="reset" class="col-md-12 btn-primary" value="Cancelar" />
-                </div>
-            </div>
-        </form>
     </div>
 </body>
 </html>

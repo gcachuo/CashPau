@@ -1,5 +1,7 @@
 <?php 
-require("salir.php");
+//require("salir.php");
+session_start();
+require("tiempo.php");
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,12 +10,10 @@ require("salir.php");
 </head>
 <body>
     <?php
-    require("tiempo.php");
-    try
-    {
+    //$_SESSION['tipoUsuario']='a';
         if(isset($_SESSION['tipoUsuario']))
         {
-            require("sesion.php");		
+            //require("sesion.php");		
             if($_SESSION['tipoUsuario']=="a")
             {
                 //Administrador
@@ -26,6 +26,44 @@ require("salir.php");
                 else if(isset($_POST['miserv']))
                 {
                     require('misServicios.php');
+                }
+                else if(isset($_POST['actuser']))
+                {
+                    $user=$_POST['usuario'];
+                    $tipo=$_POST['tipoUsuario'];
+                    $id=$_POST['idServicio'];
+                    $numero=$_POST['numeroCliente'];
+                    try
+                    {
+                        include("managerBD.php");
+                        echo $consulta="call updateusuarios ('$user','$tipo')";
+                        echo $ejecutarConsulta =  mysql_query($consulta);
+                        if($ejecutarConsulta)
+                            echo 'correcto';
+                        else
+                            echo'incorrecto';
+                        include("cerrarConexion.php"); 
+                    }
+                    catch (Exception $exception)
+                    {
+                        echo $exception;
+                    }
+                    try
+                    {
+                        include("managerBD.php");
+                        echo $consulta="call updateservicioscliente ('$numero','$user','$id')";
+                        echo $ejecutarConsulta =  mysql_query($consulta);
+                        if($ejecutarConsulta)
+                            echo 'correcto';
+                        else
+                            echo'incorrecto';
+                        include("cerrarConexion.php"); 
+                    }
+                    catch (Exception $exception)
+                    {
+                        echo $exception;
+                    }
+                    require('adminUsers.php');
                 }
                 else if(isset($_POST['insertservicio']))
                 {
@@ -84,9 +122,7 @@ require("salir.php");
                             echo $exception;
                         }
                         
-                        
-                        
-                        // require('homeAdmin.php');
+                       
                         echo $_SESSION['insertusuarios'];
                         require('registrarUser.php');
                     }
@@ -100,48 +136,12 @@ require("salir.php");
                 {
                     require('adminUsers.php');
                 }
-                else if(isset($_POST['actuser']))
-                {
-                    $usuario=$_POST['usuario'];
-                    $tipo=$_POST['tipoUsuario'];
-                    $idServicio=$_POST['idServicio'];
-                    $numeroCliente=$_POST['numeroCliente'];
-                     try
-                        {
-                            include("managerBD.php");
-                            echo $consulta="call updateusuarios ('$usuario','$tipo')";
-                            echo $ejecutarConsulta =  mysql_query($consulta);
-                            if($ejecutarConsulta)
-                                echo 'correcto';
-                            else
-                                echo'incorrecto';
-                        }
-                        catch (Exception $exception)
-                        {
-                            echo $exception;
-                        }
-                     try
-                        {
-                            include("managerBD.php");
-                            echo $consulta="call updateusuarios ('$numeroCliente','$usuario','$idServicio')";
-                            echo $ejecutarConsulta =  mysql_query($consulta);
-                            if($ejecutarConsulta)
-                                echo 'correcto';
-                            else
-                                echo'incorrecto';
-                            include("cerrarConexion.php"); 
-                        }
-                        catch (Exception $exception)
-                        {
-                            echo $exception;
-                        }
-                    //require('adminUsers.php');
-                }
+               
                 else if(isset($_POST['back']))
                 {
                     require('homeAdmin.php');                    
                 }  
-                else if(!isset($_POST['reguser'])&&!isset($_POST['miserv'])&&!isset($_POST['insertservicio']))
+                else if(!isset($_POST['reguser'])&&!isset($_POST['miserv'])&&!isset($_POST['insertservicio'])&&!isset($_POST['actuser']))
                 {
                     require('homeAdmin.php');
                 }
@@ -199,7 +199,7 @@ require("salir.php");
                     {
                         echo $exception;
                     }
-                        
+                    
                     require('pagarServicio.php');
                 }
                 else if(isset($_POST['pagarserv']))
@@ -223,17 +223,13 @@ require("salir.php");
         }
         else
         {
-            echo 'No ha iniciado Sesion';
-            session_unset();
+            //echo $_SESSION['usuario'];
+            echo 'No ha iniciado Sesion1';
+            //session_unset();
             header("refresh:2;login.php");
         }
-    }
-    catch (Exception $exception)
-    {
-        echo $exception;
-        session_unset();
-        header("refresh:2;login.php");
-    }     
+    
+    
     
     ?>
 
