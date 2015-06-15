@@ -1,0 +1,24 @@
+﻿body {
+   
+}
+.align-left {
+     text-align: left;
+}
+.align-right {
+     text-align: right;
+}
+.cabecera {
+    background-color: #00008b;
+    margin: 0 0 0 0;
+    padding: 0 0 30px;
+    color: #ffffff;
+}
+input {
+    text-align: center;
+}
+div {
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid black;
+}
