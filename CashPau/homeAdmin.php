@@ -21,8 +21,7 @@
     <div class="col-md-5">
         <div class="col-md-6">
             <form action="home.php" method="post">
-                <input value="reguser" name="reguser" type="hidden" />
-                <input type="submit" class="col-md-12 btn-primary" value="Registrar Usuario" />
+                <input type="submit" name="reguser" class="col-md-12 btn-primary" value="Registrar Usuario" />
             </form>
         </div>
         <div class="col-md-6">

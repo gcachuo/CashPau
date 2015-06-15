@@ -63,6 +63,7 @@
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\site.css" />
+    <Content Include="formRegU.php" />
     <Content Include="home.php" />
     <Content Include="homeAdmin.php" />
     <Content Include="homeUser.php" />
