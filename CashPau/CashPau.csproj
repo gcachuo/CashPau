@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="adminUsers.php" />
     <Content Include="CaducarSesion.php" />
     <Content Include="cerrarConexion.php" />
     <Content Include="contacto.php" />
@@ -70,6 +71,7 @@
     <Content Include="login.php" />
     <Content Include="managerBD.php" />
     <Content Include="misServicios.php" />
+    <Content Include="mostrarRegistros.php" />
     <Content Include="pagarServicio.php" />
     <Content Include="redes.php" />
     <Content Include="registrarUser.php" />

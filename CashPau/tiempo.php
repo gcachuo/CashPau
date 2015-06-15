@@ -8,7 +8,7 @@
 		}
 		else
 		{
-				$activo=60;
+				$activo=1200;
 			if(isset($_SESSION['tiempo']))
 			{
 				$vidasesion=time()- $_SESSION['tiempo'];
@@ -19,10 +19,5 @@
 			}
 			$_SESSION['tiempo']=time();
 		    //require('tiempo.php');
-			
-			$nombre = $_SESSION['usuario'];
-			$pass = $_SESSION['password'];
-			
-			echo "Nombre: $nombre Password: $pass";
 		}
 ?>

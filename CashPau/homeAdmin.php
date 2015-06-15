@@ -7,7 +7,7 @@
     <link href="css/site.css" rel="stylesheet" />
 </head>
 <body>
-
+   
     <div class="col-md-3">
     </div>
     <div class="col-md-2">
@@ -25,7 +25,9 @@
             </form>
         </div>
         <div class="col-md-6">
-            <input type="button" class="col-md-12 btn-primary" value="Administrar Usuarios" />
+            <form action="home.php" method="post">
+                <input type="submit" name="adminuser" class="col-md-12 btn-primary" value="Administrar Usuarios" />
+            </form>
         </div>
         <div class="col-md-6">
             <input type="button" class="col-md-12 btn-primary" value="Agregar Servicio" />

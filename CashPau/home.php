@@ -68,7 +68,47 @@ require("salir.php");
                         require('registrarUser.php');
                     }
                 }
-               
+                else if(isset($_POST['adminuser']))
+                {
+                    require('adminUsers.php');
+                }
+                else if(isset($_POST['actuser']))
+                {
+                    $usuario=$_POST['usuario'];
+                    $tipo=$_POST['tipoUsuario'];
+                    $idServicio=$_POST['idServicio'];
+                    $numeroCliente=$_POST['numeroCliente'];
+                     try
+                        {
+                            include("managerBD.php");
+                            echo $consulta="call updateusuarios ('$usuario','$tipo')";
+                            echo $ejecutarConsulta =  mysql_query($consulta);
+                            if($ejecutarConsulta)
+                                echo 'correcto';
+                            else
+                                echo'incorrecto';
+                        }
+                        catch (Exception $exception)
+                        {
+                            echo $exception;
+                        }
+                     try
+                        {
+                            include("managerBD.php");
+                            echo $consulta="call updateusuarios ('$numeroCliente','$usuario','$idServicio')";
+                            echo $ejecutarConsulta =  mysql_query($consulta);
+                            if($ejecutarConsulta)
+                                echo 'correcto';
+                            else
+                                echo'incorrecto';
+                            include("cerrarConexion.php"); 
+                        }
+                        catch (Exception $exception)
+                        {
+                            echo $exception;
+                        }
+                    //require('adminUsers.php');
+                }
                 else if(isset($_POST['back']))
                 {
                     require('homeAdmin.php');                    
@@ -109,6 +149,7 @@ require("salir.php");
                     }
                     require("misServicios.php");
                 }
+                
                 else if(isset($_POST['pagarserv']))
                 {
                     require('pagarServicio.php');
