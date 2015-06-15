@@ -3,7 +3,7 @@
 session_start();
 if(isset($_SESSION['usuario']) && isset($_SESSION['password'])&&isset($_SESSION['tipoUsuario'])&&isset($_SESSION['nombre']))
 {
-    //header("Location:home.php");	
+    header("Location:home.php");	
 }
 $mensaje= "";
 if (isset($_POST['usuario'])&&isset($_POST['password']))

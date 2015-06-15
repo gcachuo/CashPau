@@ -1,8 +1,7 @@
 <?php
-if(!isset($_SESSION['tipoUsuario']))
-{
+session_start();
     
-session_unset();
-header("Location: login.php");
-}
+    session_unset();
+    header("Location: login.php");
+
 ?>

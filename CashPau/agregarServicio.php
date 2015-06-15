@@ -5,7 +5,7 @@
     <br />
     <br />
     <br />
-    <form id="contact_form" action="home.php" method="POST" enctype="multipart/form-data">
+    <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
 
 
         <div class="row uniform">

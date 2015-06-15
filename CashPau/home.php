@@ -75,8 +75,8 @@ require("tiempo.php");
                     try
                     {
                         include("managerBD.php");
-                        echo $consulta="call insertservicioscliente ('$numeroCliente','$usuario','$idServicio','$fecha','$nombre')";
-                        echo $ejecutarConsulta =  mysql_query($consulta);
+                        $consulta="call insertservicioscliente ('$numeroCliente','$usuario','$idServicio','$fecha','$nombre')";
+                        $ejecutarConsulta =  mysql_query($consulta);
                         if($ejecutarConsulta)
                             echo 'correcto';
                         else
@@ -87,7 +87,7 @@ require("tiempo.php");
                     {
                         echo $exception;
                     }
-                    require("misServicios.php");
+                    require("homeAdmin.php");
                 }
                 if(isset($_POST['registrarusuario']))
                 {
@@ -176,7 +176,7 @@ require("tiempo.php");
                     {
                         echo $exception;
                     }
-                    require("misServicios.php");
+                    require("homeUser.php");
                 }
                 else if(isset($_POST['pagar']))
                 {
@@ -200,11 +200,11 @@ require("tiempo.php");
                         echo $exception;
                     }
                     
-                    require('pagarServicio.php');
+                    require("homeUser.php");
                 }
                 else if(isset($_POST['pagarserv']))
                 {
-                    require('pagarServicio.php');
+                    require("homeUser.php");
                 }
                 else if(isset($_POST['contacto']))
                 {

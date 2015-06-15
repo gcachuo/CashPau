@@ -63,39 +63,50 @@
             <section id="one">
                 <div class="container">
                     <header class="major">
-                        </br>
-									<h5>Administrador</h5>
-                        </br></br></br>
-									<p></p>
+                        <br />
+                        <h5>Administrador</h5>
+                        <br />
+                        <br />
+                        <br />
+                        <p></p>
                         <form method="post" action="#">
                             &nbsp;&nbsp;&nbsp;&nbsp;
 										<br />
 
                             <div class="row uniform">
-                                <center>
-											<div class="30u">
-												<ul class="actions">
-													<a href="homeadmin.php#four"><img src="images/adminuser.png" alt=""
-  width="140" height="140" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <div class="30u">
+                                    <ul class="actions">
+                                        <li>
+                                            <a href="#four">
+                                                <img src="images/adminuser.png" alt=""
+                                                    width="140" height="140" />
+
+                                            </a>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													<a href="homeadmin.php#five"><img src="images/adminusers.png" alt=""
-  width="140" height="140" /></a></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													<a href="#five">
+                                                        <img src="images/adminusers.png" alt=""
+                                                            width="140" height="140" /></a><br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 												
 												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													<a href="homeadmin.php#two"><img src="images/adminserv.png" alt=""
-  width="140" height="140" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+													<a href="#two">
+                                                        <img src="images/adminserv.png" alt=""
+                                                            width="140" height="140" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													<a href="homeadmin.php#three"><img src="images/adminservs.png" alt=""
-  width="140" height="140" /></a></li>
-													</br></br></br></br></br></br></br></br>
-													
-												</ul>
-                                                </div>
-											</center>
+													<a href="#three">
+                                                        <img src="images/adminservs.png" alt=""
+                                                            width="140" height="140" /></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
                             </div>
 
                         </form>
@@ -124,11 +135,14 @@
             <section id="five">
                 <div class="container">
                     <h3>Administrar Usuarios</h3>
-                    </br></br></br></br>
-							<h1>Usuarios registrados</h1>
-                    <center>
-					<div class="table-wrapper">
-                        
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <h1>Usuarios registrados</h1>
+
+                    <div class="table-wrapper">
+
                         <?php
                         require("managerBD.php");
                         $consultar="CALL selectusuarios";
@@ -153,11 +167,17 @@
                         include("cerrarConexion.php");	
                         echo'<br/>';
                         ?>
-										</div>
-										<input type="submit" class="special" value="Modificar" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <input type="submit" class="special" value="Modificar" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													<input type="reset" value="Eliminar" />
-                    </br></br></br></br></br></br></br>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                 </div>
             </section>
 

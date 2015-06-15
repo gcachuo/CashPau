@@ -57,19 +57,17 @@
 
             <section id="one">
                 <div class="container">
-                    <h3>Bienvenido (Usuario)</h3>
+                    <h3><?php echo $_SESSION['nombre'];?></h3>
                     <header class="major">
                 </div>
 
                 <div class="container">
 
-                    <a href="userprofile.html">
+                    <a href="userprofile.php">
                         <img src="images/ussm.png" alt=""
                             width="170" height="170" /></a><br />
 
                     <form method="post" action="#">
-                        <input type="submit" class="special" value="Editar Perfil" />
-
                         <br />
                         <br />
 
@@ -78,13 +76,13 @@
 
                         <ul class="feature-icons">
                         </ul>
-                        <a href="homeusuar.html#four">
+                        <a href="#four">
                             <img src="images/btnser.png" alt=""
                                 width="170" height="170" /></a>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													<a href="homeusuar.html#three">
+													<a href="#three">
                                                         <img src="images/btnpag.png" alt=""
                                                             width="170" height="170" /></a>
                         <br />
@@ -120,116 +118,28 @@ Por su importancia social, cultural, politica, económica, industrial y comercial
             <section id="three">
                 <div class="container">
                     <h2>Pagar Servicio</h2>
-                    Selecciona un servicio<select name="selCombo" size="1" onchange="javascript:alert('prueba');">
-                        <option value="link pagina 1">Sapal</option>
-                        <option value="link pagina 2">CFE</option>
-                        <option value="link pagina 3">Predial</option>
+                    <form action="home.php" method="post">
+                        Selecciona un servicio
+                        <select name="idServicio" size="1" onchange="javascript:alert('prueba');">
 
-                    </select>
-
-                    <form method="post" action="#">
-                        forma de pago<select name="selCombo" size="1" onchange="javascript:alert('prueba');">
-                            <option value="link pagina 1">Efectivo</option>
-                            <option value="link pagina 2">Tarjeta</option>
-                            <option value="link pagina 3">otro</option>
+                            <option value="1">CFE</option>
+                            <option value="2">Sapal</option>
+                            <option value="3">Predial</option>
 
                         </select>
 
-                        <form method="post" action="#">
-                            <br />
-                            <div class="row uniform">
-                                <h1>Cantidad: </h1>
-                                <div class="6u 12u(xsmall)">
-                                    <input type="text" name="name" id="name" placeholder="$" />
-                                </div>
-                            </div>
+                        forma de pago<select name="selCombo" size="1" onchange="javascript:alert('prueba');">
+                            <option value="1">Efectivo</option>
+                            <option value="2">Tarjeta</option>
+                            <option value="3">otro</option>
 
-                            <div class="row uniform">
-                                <div class="12u">
-                                    <ul class="actions">
-                                        <li>
-                                            <input type="submit" class="special" value="Pagar" /></li>
-                                        <li>
-                                            <input type="reset" value="Cancelar" /></li>
+                        </select>
 
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </form>
-
-                        <br />
-                        <h3>Pagos registrados</h3>
-
-                        <div class="table-wrapper">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Id Servicio</th>
-                                        <th>Fecha</th>
-                                        <th>Cantidad</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>CASA</td>
-                                        <td>07/07/15</td>
-                                        <td>$400</td>
-                                    </tr>
-                                    <tr>
-                                        <td>CASA</td>
-                                        <td>03/07/15</td>
-                                        <td>$350</td>
-                                    </tr>
-                                    <tr>
-                                        <<td>EMPRESA</td>
-                                        <td>03/06/15</td>
-                                        <td>$350</td>
-                                    </tr>
-
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="2"></td>
-
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-
-                        <br />
-                        <br />
-                        <br />
-                </div>
-            </section>
-
-            <section id="four">
-                <div class="container">
-                    <h3>Agregar Servicio</h3>
-                    Selecciona un servicio<select name="selCombo" size="1" onchange="javascript:alert('prueba');">
-                        <option value="link pagina 1">Sapal</option>
-                        <option value="link pagina 2">CFE</option>
-                        <option value="link pagina 3">Predial</option>
-
-                    </select>
-
-                    <form method="post" action="#">
                         <br />
                         <div class="row uniform">
+                            <h1>Cantidad: </h1>
                             <div class="6u 12u(xsmall)">
-                                <input type="text" name="name" id="name" placeholder="Nombre de servicio" />
-                            </div>
-                        </div>
-
-                        <div class="row uniform">
-                            <div class="6u 12u(xsmall)">
-                                <input type="text" name="name" id="name" placeholder="Nombre de identificador" />
-                            </div>
-                        </div>
-
-                        <div class="row uniform">
-                            <div class="6u 12u(xsmall)">
-                                <input type="text" name="name" id="name" placeholder="numero de folio" />
+                                <input name="monto" type="text" id="name" placeholder="$" />
                             </div>
                         </div>
 
@@ -237,7 +147,86 @@ Por su importancia social, cultural, politica, económica, industrial y comercial
                             <div class="12u">
                                 <ul class="actions">
                                     <li>
-                                        <input type="submit" class="special" value="Guardar" /></li>
+                                        <input type="submit" class="special" name="pagar" value="Pagar" /></li>
+                                    <li>
+                                        <input type="reset" value="Cancelar" /></li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+
+                    <br />
+                    <h3>Pagos registrados</h3>
+
+                    <div class="table-wrapper">
+                        <?php
+                        
+                        $usuario=$_SESSION['usuario'];
+                        require("managerBD.php");
+                        $consultar="CALL selectmovimientosusuario ('$usuario')";
+                        $ejecutarConsulta= mysql_query($consultar);
+                        
+                        echo "<table style='width: 100%'>";
+                        echo' <tr>';
+                        echo'<th>Usuario</th>';
+                        echo'<th>Monto</th>';
+                        echo'<th>Descripcion</th>';
+                        echo'<th>Fecha</th>';
+                        echo'</tr>';
+                        while ($row = mysql_fetch_array($ejecutarConsulta))
+                        {
+                            echo "<tr>";
+                            echo "<td>".$row["usuario"]."</td>";
+                            echo "<td>".$row["monto"]."</td>";
+                            echo "<td>".$row["descripcion"]."</td>";
+                            echo "<td>".$row["fecha"]."</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                        include("cerrarConexion.php");	
+                        ?>
+                    </div>
+
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </section>
+
+            <section id="four">
+                <div class="container">
+                    <h3>Agregar Servicio</h3>
+                    Selecciona un servicio
+                    
+                    <form action="home.php" method="post">
+                        <select name="idServicio" size="1" onchange="javascript:alert('prueba');">
+                            <option value="1">CFE</option>
+                            <option value="2">Sapal</option>
+                            <option value="3">Predial</option>
+
+                        </select>
+
+                        <br />
+
+                        <div class="row uniform">
+                            <div class="6u 12u(xsmall)">
+                                <input type="text" name="numeroCliente" class="col-md-8" placeholder="Folio" />
+                            </div>
+                        </div>
+
+                        <div class="row uniform">
+                            <div class="6u 12u(xsmall)">
+                                <input name="nombre" type="text" class="col-md-8" placeholder="Descripcion" />
+                            </div>
+                        </div>
+
+                        <div class="row uniform">
+                            <div class="12u">
+                                <ul class="actions">
+                                    <li>
+                                        <input name="insertservicio" type="submit" class="special" value="Guardar" /></li>
                                     <li>
                                         <input type="reset" value="Cancelar" /></li>
 
@@ -250,39 +239,33 @@ Por su importancia social, cultural, politica, económica, industrial y comercial
                     <br />
                     <h2>Servicios registrados</h2>
                     <div class="table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Servicio</th>
-                                    <th>Nombre</th>
-                                    <th>Folio</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Sapal</td>
-                                    <td>CASA</td>
-                                    <td>5673HDKWND6SBWHSJWN</td>
-                                </tr>
-                                <tr>
-                                    <td>CFE</td>
-                                    <td>NEGOCIO</td>
-                                    <td>737833HDHBSBXHS2UWUW</td>
-                                </tr>
-                                <tr>
-                                    <td>Predial</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td colspan="2"></td>
-
-                                </tr>
-                            </tfoot>
-                        </table>
+                        <?php
+                        $usuario=$_SESSION['usuario'];
+                        require("managerBD.php");
+                        $consultar="CALL selectserviciosclienteusuario ('$usuario')";
+                        $ejecutarConsulta= mysql_query($consultar);
+                        
+                        echo "<table style='width: 100%'>";
+                        echo' <tr>';
+                        echo'<th>Folio</th>';
+                        echo'<th>Usuario</th>';
+                        echo'<th>Servicio</th>';
+                        echo'<th>Nombre</th>';
+                        echo'<th>Fecha</th>';
+                        echo'</tr>';
+                        while ($row = mysql_fetch_array($ejecutarConsulta))
+                        {
+                            echo "<tr>";
+                            echo "<td>".$row["numeroCliente"]."</td>";
+                            echo "<td>".$row["usuario"]."</td>";
+                            echo "<td>".$row["idServicio"]."</td>";
+                            echo "<td>".$row["nombre"]."</td>";
+                            echo "<td>".$row["fecha"]."</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                        include("cerrarConexion.php");	
+                        ?>
                     </div>
 
                     <br />
