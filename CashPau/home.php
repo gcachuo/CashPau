@@ -23,6 +23,10 @@ require("salir.php");
                     
                     require('registrarUser.php');
                 }
+                else if(isset($_POST['miserv']))
+                {
+                    require('misServicios.php');
+                }
                 if(isset($_POST['registrarusuario']))
                 {
                     if($_POST['password']==$_POST['repassword'])
@@ -117,6 +121,7 @@ require("salir.php");
                 {
                     require('homeAdmin.php');
                 }
+                
             }
             else if($_SESSION['tipoUsuario']=="u")
             {                

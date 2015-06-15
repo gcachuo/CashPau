@@ -26,14 +26,17 @@
         </div>
         <div class="col-md-6">
             <form action="home.php" method="post">
-                <input type="submit" name="adminuser" class="col-md-12 btn-primary" value="Administrar Usuarios" />
+                <input type="hidden" name="adminuser" class="col-md-12 btn-primary" value="Administrar Usuarios" />
             </form>
         </div>
         <div class="col-md-6">
-            <input type="button" class="col-md-12 btn-primary" value="Agregar Servicio" />
+            <form action="home.php" method="post">
+                    <input type="submit" name="miserv" class="col-md-12 btn-primary" value="Agregar Servicio" />
+                </form>
+            <input type="hidden" class="col-md-12 btn-primary" value="Agregar Servicio" />
         </div>
         <div class="col-md-6">
-            <input type="button" class="col-md-12 btn-primary" value="Administrar Servicios" />
+            <input type="hidden" class="col-md-12 btn-primary" value="Administrar Servicios" />
         </div>
     </div>
     <?php
