@@ -57,7 +57,7 @@ if (isset($_POST['usuario'])&&isset($_POST['password']))
 else
 {
     session_unset();
-   // echo'pass';
+    // echo'pass';
 }
 ?>
 <!DOCTYPE HTML>
@@ -99,7 +99,7 @@ else
         <footer>
             <ul class="icons">
                 <li><a href="http://www.twitter.com" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="http://www.facebook.com"  target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="http://www.facebook.com" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
                 <li><a href="http://www.linkedIn.com" target="_blank" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
 
             </ul>
@@ -158,9 +158,6 @@ else
                         <div class="col-md-2">
                         </div>
                         <div class="col-md-2">
-
-                          
-
                         </div>
                         <form action="home.php" method="post">
                             <?php

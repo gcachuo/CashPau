@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE HTML>
 <!--
 	Read Only by HTML5 UP
@@ -10,7 +7,6 @@
 <html>
 <head>
     <title>Administrador</title>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="assets/css/ie/html5shiv.js"></script><![endif]-->
@@ -32,7 +28,6 @@
         </header>
         <nav id="nav">
             <ul>
-
                 <!--<li><a href="#two">Things I Can Do</a></li>-->
                 <!--<li><a href="#three">A Few Accomplishments</a></li>-->
                 <li><a href="#one">Home</a></li>
@@ -48,17 +43,13 @@
                 <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
                 <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
                 <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-
             </ul>
         </footer>
     </section>
-
     <!-- Wrapper -->
     <div id="wrapper">
-
         <!-- Main -->
         <div id="main">
-
             <!-- One -->
             <section id="one">
                 <div class="container">
@@ -71,44 +62,30 @@
                         <p></p>
                         <form method="post" action="#">
                             &nbsp;&nbsp;&nbsp;&nbsp;
-										<br />
-
+                            <br />
                             <div class="row uniform">
-
                                 <div class="30u">
                                     <ul class="actions">
                                         <li>
                                             <a href="#four">
                                                 <img src="images/adminuser.png" alt=""
                                                     width="140" height="140" />
-
                                             </a>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													<a href="#five">
-                                                        <img src="images/adminusers.png" alt=""
-                                                            width="140" height="140" /></a><br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-												
-												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="#five">
+                                                <img src="images/adminusers.png" alt="" width="140" height="140" /></a>
+                                            <br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													<a href="#two">
-                                                        <img src="images/adminserv.png" alt=""
-                                                            width="140" height="140" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <img src="images/adminserv.png" alt="" width="140" height="140" /></a>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													<a href="#three">
-                                                        <img src="images/adminservs.png" alt=""
-                                                            width="140" height="140" /></a>
+                                                        <img src="images/adminservs.png" alt="" width="140" height="140" /></a>
                                         </li>
-
                                     </ul>
                                 </div>
-
                             </div>
-
                         </form>
                     </header>
                 </div>
@@ -118,20 +95,16 @@
                 require("agregarServicio.php");
                 ?>
             </section>
-
-
             <section id="three">
                 <?php
                 require("administrarServicios.php");
                 ?>
             </section>
-
             <section id="four">
                 <?php
                 require("agregarUsuario.php");
                 ?>
             </section>
-
             <section id="five">
                 <div class="container">
                     <h3>Administrar Usuarios</h3>
@@ -140,9 +113,7 @@
                     <br />
                     <br />
                     <h1>Usuarios registrados</h1>
-
                     <div class="table-wrapper">
-
                         <?php
                         require("managerBD.php");
                         $consultar="CALL selectusuarios";
@@ -168,9 +139,9 @@
                         echo'<br/>';
                         ?>
                     </div>
-                    <input type="submit" class="special" value="Modificar" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													<input type="reset" value="Eliminar" />
+                    <input type="submit" class="special" value="Modificar" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" value="Eliminar" />
                     <br />
                     <br />
                     <br />
@@ -180,15 +151,10 @@
                     <br />
                 </div>
             </section>
-
             <section id="six">
-                <div class="container">
+                <div class="container"></div>
             </section>
-
-
-
         </div>
-
         <!-- Footer -->
         <section id="footer">
             <div class="container">
@@ -198,9 +164,7 @@
                 </ul>
             </div>
         </section>
-
     </div>
-
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollzer.min.js"></script>
@@ -208,6 +172,5 @@
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
 </body>
 </html>

@@ -5,12 +5,10 @@
     <title></title>
 </head>
 <body>
-    <?php  
-    
+    <?php      
     require("regresar.php");
     require("managerBD.php");
-    $x=1;
-    
+    $x=1;    
     echo'<form action="home.php" method="post">';        
     $consultar="CALL selectusuarios";
     $ejecutarConsulta= mysql_query($consultar);
@@ -23,7 +21,6 @@
     }
     echo'</select>';
     include("cerrarConexion.php");	    
-    
     echo'<br/>';
     echo'
         <label>Tipo de Usuario</label><br />
@@ -37,17 +34,14 @@
             <option value="2">Sapal</option>
             <option value="3">Predial</option>
         </select><br />
-    <label>Folio</label><br />';
-    
-    echo '<input type="text" name="numeroCliente" placeholder=""/>';
-    
+    <label>Folio</label><br />';    
+    echo '<input type="text" name="numeroCliente" placeholder=""/>';    
     echo '<br />';
     echo'<input type="submit" name="actuser" class="btn-primary" />';
     echo'</form>';
     require("managerBD.php");
     $consultar="CALL selectusuarios";
-    $ejecutarConsulta= mysql_query($consultar);
-    
+    $ejecutarConsulta= mysql_query($consultar);    
     echo "<table style='width: 100%'>";
     echo' <tr>';
     echo'<th>Usuario</th>';
@@ -66,12 +60,10 @@
     }
     echo "</table>";
     include("cerrarConexion.php");	
-    echo'<br/>';
-    
+    echo'<br/>';    
     require("managerBD.php");
     $consultar="CALL selectservicioscliente";
-    $ejecutarConsulta= mysql_query($consultar);
-    
+    $ejecutarConsulta= mysql_query($consultar);    
     echo "<table style='width: 100%'>";
     echo' <tr>';
     echo'<th>Folio</th>';

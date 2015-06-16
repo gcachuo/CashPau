@@ -6,8 +6,6 @@
     <br />
     <br />
     <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-
-
         <div class="row uniform">
             <h1>Tipo de Servicio: </h1>
             <div class="6u 12u(xsmall)">
@@ -38,15 +36,9 @@
         <br />
         <br />
         <br />
-
-
-
         <input type="submit" class="special" name="insertservicio" value="Agregar" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-													<input type="reset" value="Cancelar" />
-
-
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Cancelar" />
     </form>
 </div>
 <br />

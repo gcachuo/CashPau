@@ -1,7 +1,8 @@
 <?php 
-//require("salir.php");
 session_start();
 require("tiempo.php");
+require("nusoap/lib/nusoap.php");
+$clienteSoap=new soapClient("http://www.webservicex.net/country.asmx?WSDL");
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,15 +11,11 @@ require("tiempo.php");
 </head>
 <body>
     <?php
-    require("nusoap/lib/nusoap.php");
-    //$_SESSION['tipoUsuario']='a';
     if(isset($_SESSION['tipoUsuario']))
-    {
-        //require("sesion.php");		
+    {		
         if($_SESSION['tipoUsuario']=="a")
         {
-            //Administrador
-            
+            //Administrador            
             if(isset($_POST['reguser']))
             {
                 
@@ -121,9 +118,7 @@ require("tiempo.php");
                     catch (Exception $exception)
                     {
                         echo $exception;
-                    }
-                    
-                    
+                    }      
                     echo $_SESSION['insertusuarios'];
                     require('registrarUser.php');
                 }
@@ -145,8 +140,7 @@ require("tiempo.php");
             else if(!isset($_POST['reguser'])&&!isset($_POST['miserv'])&&!isset($_POST['insertservicio'])&&!isset($_POST['actuser']))
             {
                 require('homeAdmin.php');
-            }
-            
+            }            
         }
         else if($_SESSION['tipoUsuario']=="u")
         {                
@@ -199,8 +193,7 @@ require("tiempo.php");
                 catch (Exception $exception)
                 {
                     echo $exception;
-                }
-                
+                }                
                 require("homeUser.php");
             }
             else if(isset($_POST['pagarserv']))
@@ -218,8 +211,7 @@ require("tiempo.php");
             else
             {
                 require('homeUser.php');
-            }
-            
+            }            
         }
         else if($_SESSION['tipoUsuario']=="w")
         {
@@ -270,7 +262,6 @@ require("tiempo.php");
         }
         else
         {
-            //echo $_SESSION['usuario'];
             echo 'No ha iniciado Sesion (1)';
             session_unset();
             header("refresh:2;login.php");
@@ -278,15 +269,10 @@ require("tiempo.php");
     }
     else
     {
-        //echo $_SESSION['usuario'];
         echo 'No ha iniciado Sesion (2)';
         session_unset();
         header("refresh:2;login.php");
-    }
-    
-    
-    
+    }    
     ?>
-
 </body>
 </html>
