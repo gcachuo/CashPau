@@ -23,7 +23,7 @@
                 <img src="images/profile.png" alt="" /></span>
 
             <p>
-                Bienvenido Usuario<br />
+                Bienvenid@ <?php echo $_SESSION['nombre'];?><br />
             </p>
         </header>
         <nav id="nav">

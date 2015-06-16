@@ -27,7 +27,7 @@
                 <img src="images/sinnombre.png" alt="" /></span>
 
             <p>
-                Bienvenido administrador<br />
+                Bienvenid@  <?php echo $_SESSION['nombre'];?><br />
             </p>
         </header>
         <nav id="nav">

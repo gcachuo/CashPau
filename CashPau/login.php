@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if(isset($_SESSION['usuario']) && isset($_SESSION['password'])&&isset($_SESSION['tipoUsuario'])&&isset($_SESSION['nombre']))
+if(isset($_SESSION['usuario']) && isset($_SESSION['password'])&&isset($_SESSION['tipoUsuario'])&&isset($_SESSION['nombre'])&&$_SESSION['tipoUsuario']=!"w")
 {
     header("Location:home.php");	
 }
@@ -54,6 +54,11 @@ if (isset($_POST['usuario'])&&isset($_POST['password']))
     else
         echo"<br/><center>No ha capturado valores en el formulario</center>";
 }
+else
+{
+    session_unset();
+   // echo'pass';
+}
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -86,16 +91,16 @@ if (isset($_POST['usuario'])&&isset($_POST['password']))
         <nav id="nav">
             <ul>
                 <li><a href="#one" class="active">Iniciar sesión</a></li>
-                <!--<li><a href="#two">Things I Can Do</a></li>-->
+                <li><a href="registrarUser.php">Registrar</a></li>
                 <!--<li><a href="#three">A Few Accomplishments</a></li>-->
 
             </ul>
         </nav>
         <footer>
             <ul class="icons">
-                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                <li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+                <li><a href="http://www.twitter.com" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="http://www.facebook.com"  target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="http://www.linkedIn.com" target="_blank" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
 
             </ul>
         </footer>
@@ -133,14 +138,44 @@ if (isset($_POST['usuario'])&&isset($_POST['password']))
 
                                         </li>
 
-                                        <li>
+                                        <!--<li>
                                             <input type="submit" value="Registrarse" name="registrar" class="btn-info" />
-                                        </li>
+                                        </li>-->
                                     </ul>
                                 </div>
                             </div>
                         </form>
                 </div>
+            </section>
+            <section id="two">
+                <!DOCTYPE html>
+                <html xmlns="http://www.w3.org/1999/xhtml">
+                <head>
+                    <title></title>
+                </head>
+                <body>
+                    <div class="container">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-2">
+
+                          
+
+                        </div>
+                        <form action="home.php" method="post">
+                            <?php
+                            //$_SESSION['tipoUsuario']="w";
+                            //require("formRegU.php");
+                            ?>
+                        </form>
+                        <?php
+                        
+                        
+                        ?>
+                    </div>
+                </body>
+                </html>
+
             </section>
             <br />
             <br />

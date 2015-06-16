@@ -13,11 +13,11 @@
     </div>
     <div class="col-md-12">
         <label class="col-md-6">Usuario:</label>
-        <input name="usuario" type="text" class="col-md-6 " placeholder="Usuario" required pattern="^[a-zA-Z0-9]{1,10}$" />
+        <input name="u" type="text" class="col-md-6 " placeholder="Usuario" required pattern="^[a-zA-Z0-9]{1,10}$" />
     </div>
     <div class="col-md-12">
         <label class="col-md-6">Password:</label>
-        <input name="password" type="password" class="col-md-6 " placeholder="Password" required pattern="^.{1,100}$" />
+        <input name="p" type="password" class="col-md-6 " placeholder="Password" required pattern="^.{1,100}$" />
     </div>
     <div class="col-md-12">
         <label class="col-md-6">Re-Password:</label>

@@ -8,7 +8,7 @@
 		}
 		else
 		{
-				$activo=12000;
+				$activo=1200;
 			if(isset($_SESSION['tiempo']))
 			{
 				$vidasesion=time()- $_SESSION['tiempo'];
