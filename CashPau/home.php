@@ -10,6 +10,7 @@ require("tiempo.php");
 </head>
 <body>
     <?php
+    require("nusoap/lib/nusoap.php");
     //$_SESSION['tipoUsuario']='a';
     if(isset($_SESSION['tipoUsuario']))
     {
